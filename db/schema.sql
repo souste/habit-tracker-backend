@@ -11,7 +11,7 @@ CREATE TABLE users (
 CREATE TABLE habits (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name TEXT NOT NULL,
-    frequency INTEGER DEFAULT 0,
+    frequency_per_week INTEGER DEFAULT 0,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
 
