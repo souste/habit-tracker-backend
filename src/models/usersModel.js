@@ -1,4 +1,4 @@
-const pool = require("./pool");
+const pool = require("../db/pool");
 
 async function findUserByUsernameOrEmail(username, email) {
   const result = await pool.query(`SELECT * FROM users WHERE username = $1 or email = $2`, [username, email]);
