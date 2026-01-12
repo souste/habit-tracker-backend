@@ -1,5 +1,5 @@
 const { findUserByUsernameOrEmail, createUser } = require("../models/usersModel");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const signUp = async (req, res) => {
   try {
@@ -29,4 +29,12 @@ const signUp = async (req, res) => {
       message: "Server error",
     });
   }
+};
+
+// const login = async (res, res) => {
+// const {email, password} = req.body;
+// }
+
+module.exports = {
+  signUp,
 };
