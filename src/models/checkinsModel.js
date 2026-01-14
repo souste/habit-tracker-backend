@@ -20,7 +20,7 @@ async function createCheckin(habitId, userId) {
         INSERT INTO checkins (habit_id)
         SELECT h.id
         FROM habits h
-        WHERE h.id = $1 AND h.user_id = 2
+        WHERE h.id = $1 AND h.user_id = $2
         RETURNING id, habit_id, date_completed`,
     [habitId, userId]
   );

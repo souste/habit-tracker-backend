@@ -1,7 +1,0 @@
-const { Router } = require("express");
-const router = Router();
-
-// Get habits
-// Post habits
-// Patch habits
-// Delete habits
