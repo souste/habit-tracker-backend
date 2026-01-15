@@ -10,10 +10,10 @@ app.get("/", (req, res) => res.json({ message: "This is the habit tracking app!"
 
 const authRoutes = require("./routes/authRoutes");
 const habitsRoutes = require("./routes/habitsRoutes");
-// const checkinsRoutes = require("./routes/checkinsRoutes");
+const checkinsRoutes = require("./routes/checkinsRoutes");
 
 app.use("/auth", authRoutes);
 app.use("/habits", habitsRoutes);
-// app.use("/checkin", checkinsRoutes);
+app.use("/checkins", checkinsRoutes);
 
 app.listen(3000, () => console.log("Server is running on port 3000"));

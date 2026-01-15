@@ -1,6 +1,6 @@
 const pool = require("../db/pool");
 
-async function getCheckinsForHabit(habitId, userId) {
+async function getCheckinsForHabitModel(habitId, userId) {
   const result = await pool.query(
     `
     SELECT c.id, c.date_completed
@@ -14,7 +14,7 @@ async function getCheckinsForHabit(habitId, userId) {
   return result.rows;
 }
 
-async function createCheckin(habitId, userId) {
+async function createCheckinModel(habitId, userId) {
   const result = await pool.query(
     `
         INSERT INTO checkins (habit_id)
@@ -29,6 +29,6 @@ async function createCheckin(habitId, userId) {
 }
 
 module.exports = {
-  getCheckinsForHabit,
-  createCheckin,
+  getCheckinsForHabitModel,
+  createCheckinModel,
 };

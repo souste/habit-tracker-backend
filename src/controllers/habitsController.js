@@ -32,11 +32,11 @@ const createHabitController = async (req, res) => {
       });
     }
 
-    const result = await createHabitModel(name, userId);
+    const created = await createHabitModel(name, userId);
 
     res.status(201).json({
       success: true,
-      data: result,
+      data: created,
       message: "Habit created successfully",
     });
   } catch (err) {
